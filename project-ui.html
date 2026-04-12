@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Code | UI Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="nav">
+  <div class="logo">Viren Acharya</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html" class="active">Projects</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="game-hero" id="hero">
+  <div class="overlay"></div>
+  <div class="particles"></div>
+
+  <div class="hero-content">
+    <h1 class="glow floating">💻 Get Code</h1>
+    <p class="fade-in">Reusable UI Components for Faster Development</p>
+
+    <div class="buttons fade-in delay">
+      <a href="https://github.com/virenAcharya/get-code" class="btn glow-btn">
+        🚀 View Code
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- PREVIEW -->
+<section class="section hidden">
+  <h2>📸 Platform Preview</h2>
+
+  <div class="image-grid">
+    <img src="images/getcode1.png" alt="UI Components">
+    <img src="images/getcode2.png" alt="Code Preview">
+    <img src="images/getcode3.png" alt="Platform UI">
+  </div>
+</section>
+
+
+
+<!-- ABOUT -->
+<section class="section hidden">
+  <h2>📌 About the Platform</h2>
+
+  <div class="glass-card">
+    <p>
+      Get Code is a UI sharing platform where developers can access ready-made 
+      HTML, CSS, and JavaScript components and also contribute their own designs.
+    </p>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section hidden">
+  <h2>✨ Features</h2>
+
+  <div class="feature-grid">
+
+    <div class="feature-card">
+  <h3>📦 Ready Components</h3>
+  <p>Pre-built UI elements to speed up development.</p>
+</div>
+
+<div class="feature-card">
+  <h3>⚡ Instant Copy</h3>
+  <p>Copy-paste code and use instantly in projects.</p>
+</div>
+
+<div class="feature-card">
+  <h3>🌍 Community Driven</h3>
+  <p>Developers contribute and share UI designs.</p>
+</div>
+  </div>
+</section>
+
+
+<!-- TECH STACK -->
+<section class="section hidden">
+  <h2>🛠 Tech Stack</h2>
+
+  <div class="glass-card">
+    HTML, CSS, JavaScript, GitHub
+  </div>
+</section>
+
+<!-- LEARNING -->
+<section class="section hidden">
+  <h2>📚 What I Learned</h2>
+
+  <div class="glass-card">
+    <p>
+      Learned how to structure reusable UI systems, manage code organization,
+      and think from a developer experience perspective while building tools.
+    </p>
+  </div>
+</section>
+
+
+<script>
+/* ================= IMAGE POPUP ================= */
+const popup = document.createElement("div");
+popup.className = "image-popup";
+popup.innerHTML = `
+  <span class="close-btn">&times;</span>
+  <img src="" alt="preview">
+`;
+document.body.appendChild(popup);
+
+const popupImg = popup.querySelector("img");
+const closeBtn = popup.querySelector(".close-btn");
+
+document.querySelectorAll(".image-grid img").forEach(img => {
+  img.addEventListener("click", () => {
+    popup.classList.add("active");
+    popupImg.src = img.src;
+  });
+});
+
+closeBtn.addEventListener("click", () => {
+  popup.classList.remove("active");
+});
+
+popup.addEventListener("click", (e) => {
+  if (e.target === popup) popup.classList.remove("active");
+});
+
+
+/* ================= SCROLL ANIMATION ================= */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll(".section").forEach(sec => {
+  observer.observe(sec);
+});
+
+
+/* ================= HERO PARALLAX ================= */
+const hero = document.getElementById("hero");
+
+if (hero) {
+  const overlay = document.querySelector(".overlay");
+  const particles = document.querySelector(".particles");
+  const content = document.querySelector(".hero-content");
+
+  hero.addEventListener("mousemove", (e) => {
+    const x = (e.clientX - window.innerWidth / 2) / 25;
+    const y = (e.clientY - window.innerHeight / 2) / 25;
+
+    overlay.style.transform = `translate(${x * 0.5}px, ${y * 0.5}px)`;
+    particles.style.transform = `translate(${x}px, ${y}px)`;
+    content.style.transform = `translate(${x * -0.5}px, ${y * -0.5}px)`;
+  });
+
+  hero.addEventListener("mouseleave", () => {
+    overlay.style.transform = "translate(0,0)";
+    particles.style.transform = "translate(0,0)";
+    content.style.transform = "translate(0,0)";
+  });
+}
+
+
+/* ================= CARD 3D TILT ================= */
+document.querySelectorAll(".feature-card, .image-grid img")
+.forEach(card => {
+  card.addEventListener("mousemove", (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+    card.style.transform = `
+      rotateX(${y * -10}deg)
+      rotateY(${x * 10}deg)
+      scale(1.05)
+    `;
+  });
+
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = "rotateX(0) rotateY(0) scale(1)";
+  });
+});
+
+
+/* ================= BUTTON RIPPLE ================= */
+document.querySelectorAll(".btn").forEach(btn => {
+  btn.addEventListener("click", function(e) {
+    const circle = document.createElement("span");
+    circle.classList.add("ripple");
+
+    const rect = btn.getBoundingClientRect();
+    circle.style.left = (e.clientX - rect.left) + "px";
+    circle.style.top = (e.clientY - rect.top) + "px";
+
+    btn.appendChild(circle);
+    setTimeout(() => circle.remove(), 600);
+  });
+});
+
+
+/* ================= CURSOR GLOW ================= */
+const glow = document.createElement("div");
+glow.className = "cursor-glow";
+document.body.appendChild(glow);
+
+let mouseX = 0, mouseY = 0;
+let glowX = 0, glowY = 0;
+
+document.addEventListener("mousemove", (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
+function animateGlow() {
+  glowX += (mouseX - glowX) * 0.1;
+  glowY += (mouseY - glowY) * 0.1;
+
+  glow.style.left = glowX + "px";
+  glow.style.top = glowY + "px";
+
+  requestAnimationFrame(animateGlow);
+}
+
+animateGlow();
+</script>
+</body>
+</html>

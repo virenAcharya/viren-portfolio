@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classroom System | Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="nav">
+  <div class="logo">Viren Acharya</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html" class="active">Projects</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="game-hero" id="hero">
+  <div class="overlay"></div>
+  <div class="particles"></div>
+
+  <div class="hero-content">
+    <h1 class="glow floating">🧠 Classroom System</h1>
+    <p class="fade-in">Role-Based Management System built in C</p>
+
+    <div class="buttons fade-in delay">
+      <a href="https://github.com/virenAcharya/hackathon-proj" class="btn glow-btn">
+        💻 View Source Code
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section class="section hidden">
+  <h2>📌 Overview</h2>
+
+  <div class="glass-card">
+    A console-based role-based system for managing classroom operations with Admin, Teacher, and Student access levels.
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section hidden">
+  <h2>⚙️ Core Features</h2>
+
+  <div class="feature-grid">
+
+    <div class="feature-card">
+      <h3>👤 Admin Panel</h3>
+      <p>Full control over student records (CRUD operations).</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>👨‍🏫 Teacher Panel</h3>
+      <p>Manage attendance, marks, and assignments.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>🎓 Student Panel</h3>
+      <p>View marks, attendance, and academic data.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>🔐 Secure Access</h3>
+      <p>Role-based authentication logic system.</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- TECH -->
+<section class="section hidden">
+  <h2>🛠 Tech Stack</h2>
+
+  <div class="glass-card">
+    C Programming • File Handling • Data Structures • System Logic Design
+  </div>
+</section>
+
+<!-- LEARNING -->
+<section class="section hidden">
+  <h2>📚 What I Learned</h2>
+
+  <div class="glass-card">
+    Learned structured programming, file handling, and designing real-world role-based systems.
+  </div>
+</section>
+
+
+<script>
+   document.addEventListener("DOMContentLoaded", () => {
+  /* SCROLL ANIMATION */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll(".section").forEach(sec => {
+  sec.classList.add("hidden");
+  observer.observe(sec);
+});
+
+/* =====================================================
+   CURSOR GLOW FOLLOW EFFECT 
+===================================================== */
+
+const cursorGlow = document.querySelector(".cursor-glow");
+
+if (cursorGlow) {
+  let mouseX = 0, mouseY = 0;
+  let glowX = 0, glowY = 0;
+
+  // Track mouse
+  document.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  // Smooth follow animation
+  function animateGlow() {
+    glowX += (mouseX - glowX) * 0.1;
+    glowY += (mouseY - glowY) * 0.1;
+
+    cursorGlow.style.left = glowX + "px";
+    cursorGlow.style.top = glowY + "px";
+
+    requestAnimationFrame(animateGlow);
+  }
+
+  animateGlow();
+}
+
+  animateGlow();
+
+});
+</script>
+<div class="cursor-glow"></div>
+</body>
+</html>

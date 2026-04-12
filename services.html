@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- seo meta description -->
+  <meta name="description" content="Hire Viren Acharya, a freelance frontend developer in India. I build modern, responsive websites, landing pages, and business websites using HTML, CSS, and JavaScript.">
+
+  <!-- seo meta author -->
+  <meta name="author" content="Viren Acharya">
+
+  <!-- seo meta keywords -->
+  <meta name="keywords" content="hire frontend developer India, freelance web developer India, website developer services, landing page developer, business website India, Viren Acharya developer">
+
+  <meta property="og:title" content="Hire Freelance Frontend Developer | Viren Acharya">
+<meta property="og:description" content="Modern websites, landing pages & UI development services in India.">
+<meta property="og:type" content="website">
+
+
+
+  <title>Hire Freelance Frontend Developer in India | Viren Acharya Web Services</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="logo">Viren Acharya</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="services.html" class="active">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="game-hero" id="hero">
+  <div class="overlay"></div>
+  <div class="particles"></div>
+
+  <div class="hero-content">
+    <h1 class="glow floating">💼 Freelance Web Developer</h1>
+   <p class="fade-in">
+I am Viren Acharya, a freelance frontend developer in India. I build modern, responsive, and high-performing websites for businesses, startups, and personal brands.
+</p>
+
+    <div class="buttons fade-in delay">
+      <a href="contact.html" class="btn glow-btn">Hire Me</a>
+      <a href="projects.html" class="btn secondary">View Work</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section hidden">
+  <h2>Frontend Development Services I Offer</h2>
+
+  <div class="feature-grid">
+
+    <div class="feature-card">
+      <h3>🌐 Business Websites</h3>
+      <p>Modern responsive websites for companies and startups.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>🎨 Landing Pages</h3>
+      <p>High converting landing pages for products & services.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>💻 Portfolio Sites</h3>
+      <p>Personal portfolio websites for developers & creators.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>⚡ UI Development</h3>
+      <p>Clean UI components using HTML, CSS & JavaScript.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section hidden">
+<h2>💰 Affordable Freelance Website Development Pricing</h2>
+
+  <div class="feature-grid">
+
+    <!-- BASIC -->
+    <div class="feature-card">
+      <h3>🟢 Basic</h3>
+      <h2>₹2000</h2>
+      <p>✔ 1–3 Pages</p>
+      <p>✔ Responsive Design</p>
+      <p>✔ Basic UI</p>
+      <p>✔ 3 Days Delivery</p>
+      <a href="contact.html" class="btn">Select Plan</a>
+    </div>
+
+    <!-- PRO -->
+    <div class="feature-card" style="border:2px solid #38bdf8;">
+      <h3>🔵 Pro (Recommended)</h3>
+      <h2>₹5000</h2>
+      <p>✔ Multi-page Website</p>
+      <p>✔ Advanced UI + Animations</p>
+      <p>✔ Better Design System</p>
+      <p>✔ 5 Days Delivery</p>
+      <a href="contact.html" class="btn glow-btn">Most Popular</a>
+    </div>
+
+
+  </div>
+</section>
+
+<!-- WORK PROCESS -->
+<section class="section hidden">
+  <h2>🚀 How My Freelance Web Development Process Works</h2>
+
+  <div class="feature-grid">
+
+    <div class="feature-card">
+      <h3>1. Contact Me</h3>
+      <p>Share your idea or requirements.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>2. Planning</h3>
+      <p>I design structure and layout.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>3. Development</h3>
+      <p>I build your website using HTML/CSS/JS.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>4. Delivery</h3>
+      <p>Final project delivered with support.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section hidden">
+  <h2>📩 Hire Viren Acharya for Website Development</h2>
+
+  <div class="glass-card">
+    I help businesses and individuals build modern websites using clean frontend technologies.
+    <p>
+Available for freelance projects across India — frontend websites, landing pages, and UI development.
+</p>
+  </div>
+
+
+
+  <div style="margin-top:20px;">
+    <a href="contact.html" class="btn glow-btn">Contact Now</a>
+  </div>
+</section>
+
+<!-- CURSOR -->
+<div class="cursor-glow"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+/* ================= CURSOR ================= */
+const cursorGlow = document.querySelector(".cursor-glow");
+
+if (cursorGlow) {
+  let mouseX = 0, mouseY = 0;
+  let glowX = 0, glowY = 0;
+
+  document.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  function animateGlow() {
+    glowX += (mouseX - glowX) * 0.1;
+    glowY += (mouseY - glowY) * 0.1;
+
+    cursorGlow.style.left = glowX + "px";
+    cursorGlow.style.top = glowY + "px";
+
+    requestAnimationFrame(animateGlow);
+  }
+
+  animateGlow();
+}
+
+/* ================= SCROLL ANIMATION ================= */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll(".section").forEach(sec => {
+  sec.classList.add("hidden");
+  observer.observe(sec);
+});
+
+});
+</script>
+
+</body>
+</html>

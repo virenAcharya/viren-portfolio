@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO TITLE -->
+  <title>Viren Acharya | Frontend Developer India | Portfolio & Freelance Web Developer</title>
+
+  <!-- SEO DESCRIPTION -->
+  <meta name="description" content="Viren Acharya is a Frontend Developer in India specializing in HTML, CSS, JavaScript. Explore portfolio projects and hire for modern, responsive websites and web development services.">
+
+  <!-- SEO KEYWORDS -->
+  <meta name="keywords" content="Viren Acharya, frontend developer India, hire frontend developer, freelance web developer India, portfolio website, HTML CSS JavaScript developer, web developer India">
+
+  <!-- AUTHOR -->
+  <meta name="author" content="Viren Acharya">
+
+  
+
+  <!-- OPEN GRAPH (for WhatsApp / LinkedIn sharing) -->
+  <meta property="og:title" content="Viren Acharya | Frontend Developer Portfolio">
+<meta property="og:description" content="Explore projects and hire Viren Acharya for frontend development and modern website design.">
+<meta property="og:type" content="website">
+
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="logo">Viren Acharya</div>
+  <ul>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero main-hero">
+  <div class="hero-content">
+    <h1>
+      Hi, I'm <span class="glow">Viren Acharya</span> 👋
+    </h1>
+
+   <p class="hero-sub">
+      I am a Frontend Developer in India specializing in HTML, CSS, and JavaScript.
+      I build modern, responsive, and animated websites for clients and personal projects.
+    </p>
+
+    <div class="buttons">
+      <a href="projects.html" class="btn glow-btn">🚀 View My Work</a>
+      <a href="contact.html" class="btn secondary">📩 Hire Me</a>
+    </div>
+  </div>
+</section>
+
+<!-- VALUE STRIP -->
+<section class="section show">
+  <div class="feature-grid">
+
+    <div class="feature-card">
+      <h3>⚡ Fast Learner</h3>
+      <p>Quickly adapt to new technologies and tools.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>🧠 Problem Solver</h3>
+      <p>Focused on building real-world solutions.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>🚀 Builder Mindset</h3>
+      <p>I learn by creating projects, not just theory.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FEATURED PROJECTS -->
+<section class="section">
+  <h2>🔥 Featured Projects by Viren Acharya</h2>
+
+  <div class="project-grid">
+
+    <a href="project-flying-eye.html" class="project-card">
+      <h3>🎮 Flying Eye</h3>
+      <p>2D game with sound & cross-platform support.</p>
+    </a>
+
+    <a href="project-ui.html" class="project-card">
+      <h3>💻 Get Code</h3>
+      <p>UI component sharing platform for developers.</p>
+    </a>
+
+    <a href="project-classroom.html" class="project-card">
+      <h3>🧠 Classroom System</h3>
+      <p>Role-based system built in C.</p>
+    </a>
+
+  </div>
+</section>
+
+<!-- SERVICES CTA -->
+<section class="section">
+  <h2>Hire Frontend Developer in India</h2>
+
+  <div class="glass-card">
+    <p>
+      I help local businesses build modern websites to grow online 
+      and attract more customers.
+    </p>
+
+    <a href="services.html" class="btn">Get Your Website</a>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="section">
+  <h2>🚀 Let's Build Something</h2>
+
+  <p style="text-align:center; color:#94a3b8;">
+    Looking for a developer who can build and learn fast? Let’s connect.
+  </p>
+
+  <div style="text-align:center;">
+    <a href="contact.html" class="btn glow-btn">Contact Me</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="text-align:center;padding:30px;color:#64748b;">
+  © 2026 Viren Acharya • Built with passion 🚀
+</footer>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  /* =====================================================
+   CURSOR GLOW FOLLOW EFFECT 
+===================================================== */
+
+const cursorGlow = document.querySelector(".cursor-glow");
+
+if (cursorGlow) {
+  let mouseX = 0, mouseY = 0;
+  let glowX = 0, glowY = 0;
+
+  // Track mouse
+  document.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  // Smooth follow animation
+  function animateGlow() {
+    glowX += (mouseX - glowX) * 0.1;
+    glowY += (mouseY - glowY) * 0.1;
+
+    cursorGlow.style.left = glowX + "px";
+    cursorGlow.style.top = glowY + "px";
+
+    requestAnimationFrame(animateGlow);
+  }
+
+  animateGlow();
+}
+});
+</script>
+<div class="cursor-glow"></div>
+</body>
+</html>

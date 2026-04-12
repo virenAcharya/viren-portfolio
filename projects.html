@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Viren</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="nav">
+    <div class="logo">Viren Acharya</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+
+<section class="section">
+  <h2>My Projects</h2>
+
+  <div class="project-grid">
+
+    <!-- Project 1 -->
+    <a href="project-flying-eye.html" class="project-card">
+      <h3>🎮 Flying Eye</h3>
+      <p>2D game built using Unreal Engine with sound and cross-platform support.</p>
+    </a>
+
+    <!-- Project 2 -->
+    <a href="project-ui.html" class="project-card">
+      <h3>💻 UI Sharing Website</h3>
+      <p>Platform to upload and reuse HTML, CSS, and JS UI components.</p>
+    </a>
+
+    <!-- Project 3 -->
+    <a href="project-classroom.html" class="project-card">
+      <h3>🧠 Classroom Management</h3>
+      <p>Role-based system in C for managing students, teachers, and admin tasks.</p>
+    </a>
+
+  </div>
+</section>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  /* =====================================================
+   CURSOR GLOW FOLLOW EFFECT 
+===================================================== */
+
+const cursorGlow = document.querySelector(".cursor-glow");
+
+if (cursorGlow) {
+  let mouseX = 0, mouseY = 0;
+  let glowX = 0, glowY = 0;
+
+  // Track mouse
+  document.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  // Smooth follow animation
+  function animateGlow() {
+    glowX += (mouseX - glowX) * 0.1;
+    glowY += (mouseY - glowY) * 0.1;
+
+    cursorGlow.style.left = glowX + "px";
+    cursorGlow.style.top = glowY + "px";
+
+    requestAnimationFrame(animateGlow);
+  }
+
+  animateGlow();
+}
+});
+</script>
+<div class="cursor-glow"></div>
+</body>
+</html>
