@@ -14,7 +14,7 @@ I am Viren Acharya, a frontend developer who builds modern, responsive, and anim
 
 ## 🌐 Live Website
 Once deployed via GitHub Pages:
-https://virenAharya.github.io/viren-portfolio/
+[https://virenAharya.github.io/viren-portfolio/](https://virenacharya.github.io/viren-portfolio/)
 
 ## 🛠 Tech Stack
 - HTML5
