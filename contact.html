@@ -186,21 +186,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.getElementById("hamburger");
   const navLinks = document.getElementById("nav-links");
 
-  // 👉 IMPORTANT CHECK
-  if (hamburger && navLinks) {
+ if (hamburger && navLinks) {
 
-    hamburger.addEventListener("click", () => {
-      console.log("clicked"); // debug
-      navLinks.classList.toggle("active");
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    hamburger.classList.toggle("open"); 
+  });
+
+  document.querySelectorAll("#nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("active");
+      hamburger.classList.remove("open"); 
     });
+  });
 
-    document.querySelectorAll("#nav-links a").forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-      });
-    });
-
-  }
+}
 });
 </script>
 
