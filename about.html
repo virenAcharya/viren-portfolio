@@ -109,17 +109,24 @@ if (cursorGlow) {
 
   animateGlow();
 }
-const hamburger = document.getElementById("hamburger");
-const navLinks = document.getElementById("nav-links");
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("nav-links");
 
-hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
-document.querySelectorAll("#nav-links a").forEach(link => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("active");
-  });
-});
+  // 👉 IMPORTANT CHECK
+  if (hamburger && navLinks) {
+
+    hamburger.addEventListener("click", () => {
+      console.log("clicked"); // debug
+      navLinks.classList.toggle("active");
+    });
+
+    document.querySelectorAll("#nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+      });
+    });
+
+  }
 });
 </script>
 <div class="cursor-glow"></div>
