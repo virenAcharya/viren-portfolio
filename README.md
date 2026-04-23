@@ -1,6 +1,6 @@
 # 🚀 Viren Portfolio Website
 
-This is my personal portfolio website built using **HTML, CSS, and JavaScript**.
+This is my personal Portfolio website built using **HTML, CSS, and JavaScript**.
 
 ## 👨‍💻 About Me
 I am Viren Acharya, a frontend developer who builds modern, responsive, and animated websites.
