@@ -636,3 +636,52 @@ body {
   margin: 10px 0;
 }
 
+
+/* ================= HAMBURGER ================= */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #38bdf8;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* ================= MOBILE NAV ================= */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav ul {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+
+    flex-direction: column;
+    background: rgba(2,6,23,0.95);
+    backdrop-filter: blur(10px);
+
+    max-height: 0;
+    overflow: hidden;
+
+    transition: max-height 0.3s ease;
+  }
+
+  .nav ul.active {
+    max-height: 300px;
+  }
+
+  .nav ul li {
+    text-align: center;
+    padding: 12px 0;
+  }
+}

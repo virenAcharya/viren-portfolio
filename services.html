@@ -28,6 +28,12 @@
 <!-- NAV -->
 <nav class="nav">
   <div class="logo">Viren Acharya</div>
+  <!-- NEW: Hamburger -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
   <ul>
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
@@ -178,7 +184,17 @@ document.querySelectorAll(".section").forEach(sec => {
   sec.classList.add("hidden");
   observer.observe(sec);
 });
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("nav-links");
 
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+document.querySelectorAll("#nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+  });
+});
 });
 </script>
 
